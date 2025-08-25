@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="303dp"
+        android:layout_height="149dp"
+        android:layout_marginTop="14dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/banner1" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Raja Ji"
+        android:textSize="35sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Sign Up Here For Your \n Admin Dashboard"
+        android:textAlignment="center"
+        android:textColor="#5BE9F6"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView7"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="365dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/user_01"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:hint="Name Of Owner"
+        android:inputType="textMultiLine"
+        android:paddingLeft="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+
+    <EditText
+        android:id="@+id/adress"
+        android:layout_width="365dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/_97037154_49e73213_5a83_4d59_a536_bc2e71a0e3d3"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:hint="Enter Your Adress"
+        android:inputType="textMultiLine"
+        android:paddingLeft="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/nameofcompany"
+        app:layout_constraintStart_toStartOf="@+id/nameofcompany"
+        app:layout_constraintTop_toBottomOf="@+id/nameofcompany" />
+
+    <EditText
+        android:id="@+id/nameofcompany"
+        android:layout_width="365dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/home_02"
+        android:drawablePadding="9dp"
+        android:ems="10"
+        android:hint="Name of Company"
+        android:inputType="text"
+        android:paddingLeft="9dp"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <EditText
+        android:id="@+id/emailorphone"
+        android:layout_width="365dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/mail_02"
+        android:drawablePadding="9dp"
+        android:ems="10"
+        android:hint="Email Or Phone Number"
+        android:inputType="text"
+        android:paddingLeft="9dp"
+        app:layout_constraintEnd_toEndOf="@+id/nameofcompany"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nameofcompany"
+        app:layout_constraintTop_toBottomOf="@+id/adress" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="365dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/lock_01"
+        android:drawablePadding="9dp"
+        android:ems="10"
+        android:hint="Password"
+        android:background="@color/white"
+        android:inputType="textPassword"
+        android:paddingLeft="9dp"
+        app:layout_constraintEnd_toEndOf="@+id/emailorphone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/emailorphone"
+        app:layout_constraintTop_toBottomOf="@+id/emailorphone" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/google"
+        android:layout_width="131dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/google_icon_2"
+        android:text="Google"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/createUserButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/greenbutton"
+        android:text="Create Account"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/google" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/allreadyhaveacount"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/greenbutton"
+        android:text="Allready account"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/createUserButton"
+        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintStart_toStartOf="@+id/createUserButton"
+        app:layout_constraintTop_toBottomOf="@+id/createUserButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

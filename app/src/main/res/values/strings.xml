@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Partner ji</string>
+    <string name="default_web_client_id">google-services.json</string>
+</resources>
