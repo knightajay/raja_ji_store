@@ -7,216 +7,200 @@
     android:layout_height="match_parent"
     android:background="@drawable/kyahal"
     tools:context=".AddItemActivity">
-    <ScrollView
-    android:layout_width="0dp"
-    android:layout_height="match_parent"
-    android:scrollbars="none"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="1.0">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backbuttonn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon"
+            app:tint="@color/black" />
 
         <TextView
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Add Item"
+            android:text="Add New Item"
             android:textColor="@color/black"
-            android:textSize="32sp"
-            android:textStyle="italic"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textinputlayaout"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="match_parent"
-            android:layout_height="57dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView13">
-
-            <AutoCompleteTextView
-                android:id="@+id/listoflocation"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="none"
-                android:text="Chose your Storelist"
-                android:textColor="@color/black"
-                tools:layout_editor_absoluteY="0dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <EditText
-            android:id="@+id/entername"
-            android:layout_width="0dp"
-            android:layout_height="57dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/edittextshape"
-            android:ems="10"
-            android:textColorHint="@color/black"
-            android:hint="Enter Company Name"
-            android:elevation="16dp"
-            android:outlineSpotShadowColor="#2ECCB8"
-            android:textColor="@color/black"
-            android:inputType="textImeMultiLine|textMultiLine"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textinputlayaout" />
-
-        <EditText
-            android:id="@+id/enteradress"
-            android:layout_width="0dp"
-            android:layout_height="57dp"
-            android:layout_marginTop="9dp"
-            android:background="@drawable/edittextshape"
-            android:elevation="16dp"
-            android:ems="10"
-            android:hint="Enter Address"
-            android:inputType="text|textImeMultiLine|textMultiLine"
-            android:outlineSpotShadowColor="#2ECCB8"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            app:layout_constraintEnd_toEndOf="@+id/entername"
-            app:layout_constraintStart_toStartOf="@+id/entername"
-            app:layout_constraintTop_toBottomOf="@+id/entername" />
-
-        <EditText
-            android:id="@+id/enterprice"
-            android:layout_width="0dp"
-            android:layout_height="57dp"
-            android:layout_marginTop="9dp"
-            android:background="@drawable/edittextshape"
-            android:ems="10"
-            android:hint="Enter Price"
-            android:inputType="text"
-            android:elevation="16dp"
-            android:outlineSpotShadowColor="#2ECCB8"
-            android:textColorHint="@color/black"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="@+id/enteradress"
-            app:layout_constraintStart_toStartOf="@+id/enteradress"
-            app:layout_constraintTop_toBottomOf="@+id/enteradress" />
-
-        <TextView
-            android:id="@+id/selectimage"
-            android:layout_width="0dp"
-            android:layout_height="57dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/edittextshape"
-            android:drawableRight="@drawable/plus_circle"
-            android:gravity="center_vertical"
-            android:paddingLeft="15dp"
-            android:elevation="16dp"
-            android:outlineSpotShadowColor="#2ECCB8"
-            android:paddingRight="15dp"
-            android:text="Select Image"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="@+id/enterprice"
-            app:layout_constraintStart_toStartOf="@+id/enterprice"
-            app:layout_constraintTop_toBottomOf="@+id/enterprice" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView6"
-            android:layout_width="210dp"
-            android:layout_height="185dp"
-            android:layout_marginTop="20dp"
-            android:elevation="16dp"
-            android:outlineSpotShadowColor="#2ECCB8"
-            app:cardCornerRadius="15dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/selectimage"
-            app:layout_constraintTop_toBottomOf="@+id/selectimage">
-
-            <ImageView
-                android:id="@+id/selectedimage"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/heart" />
-
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:id="@+id/textView23"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="12dp"
-            android:background="@drawable/edittextshape"
-            android:gravity="center_vertical"
-            android:paddingLeft="16dp"
-            android:elevation="16dp"
-            android:outlineSpotShadowColor="#2ECCB8"
-            android:textColorHint="@color/black"
-            android:textColor="@color/black"
-            android:text="Short Description"
-            android:textSize="19sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView6" />
-
-        <EditText
-            android:id="@+id/description"
-            android:layout_width="0dp"
-            android:layout_height="101dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/edittextshape"
-            android:hint="something......"
-            android:inputType="textMultiLine"
-            android:textColorHint="@color/black"
-            android:textColor="@color/black"
-            android:paddingLeft="12dp"
-            android:elevation="16dp"
-            android:outlineSpotShadowColor="#2ECCB8"
-            android:textSize="17sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView23" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/additem"
-            android:layout_width="153dp"
-            android:layout_height="54dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/greenbutton"
-            android:text="Add Item"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="22sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/description"
-            app:layout_constraintStart_toStartOf="@+id/description"
-            app:layout_constraintTop_toBottomOf="@+id/description" />
-
-        <ImageButton
-            android:id="@+id/backbuttonn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintBottom_toBottomOf="@+id/textView13"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/icon" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinputlayaout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Choose Store Category"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/listoflocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameLayout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Company Name"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary"
+                app:layout_constraintTop_toBottomOf="@+id/textinputlayaout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/entername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addressLayout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Full Address"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary"
+                app:layout_constraintTop_toBottomOf="@+id/nameLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enteradress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/priceLayout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Price (₹)"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary"
+                app:layout_constraintTop_toBottomOf="@+id/addressLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enterprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/selectimage"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edittextshape"
+                android:clickable="true"
+                android:elevation="2dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:text="Select Item Image"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:drawableEndCompat="@drawable/plus_circle"
+                app:layout_constraintTop_toBottomOf="@+id/priceLayout" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView6"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selectimage">
+
+                <ImageView
+                    android:id="@+id/selectedimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/heart" />
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/descriptionLayout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Short Description"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary"
+                app:layout_constraintTop_toBottomOf="@+id/cardView6">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/additem"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/greenbutton"
+                android:text="Add Item"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionLayout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,5 +5,6 @@ data class allmenu(
     val companyAdress :String ?=null,
     val Price :String ?=null,
     val image :String ?=null,
+    val adminid : String ?=null,
     val description :String ?=null
 )

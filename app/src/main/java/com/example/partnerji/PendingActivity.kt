@@ -9,6 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.partnerji.databinding.ActivityPendingBinding
 import com.example.partnerji.model.orderdetail
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -34,7 +35,7 @@ class PendingActivity : AppCompatActivity(),pendingAdapter.OnItemClicked {
         setContentView(binding.root)
         // intialize firebase
         database = FirebaseDatabase.getInstance()
-        databaseOrderdetail = database.reference.child("Orderdetail")
+        databaseOrderdetail = database.reference.child("Orderdetail").child(FirebaseAuth.getInstance().currentUser!!.uid)
         getOrderdetail()
         binding.backimage.setOnClickListener{
             finish()

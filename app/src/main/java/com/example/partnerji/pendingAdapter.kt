@@ -29,14 +29,14 @@ class pendingAdapter (
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): pendingAdapter.pendingOrderViewHolder {
+    ): pendingOrderViewHolder {
         val binding=PendigitemBinding.inflate(LayoutInflater.from(parent.context) ,parent,false)
         return pendingOrderViewHolder(binding)
     }
 
 
 
-    override fun onBindViewHolder(holder: pendingAdapter.pendingOrderViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: pendingOrderViewHolder, position: Int) {
         holder.bind(position)
     }
 

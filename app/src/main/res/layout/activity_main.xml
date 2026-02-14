@@ -5,232 +5,268 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:background="@drawable/kyahal"
+    android:background="@drawable/kyahal"
     tools:context=".MainActivity">
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="15dp"
-        android:text="Ceremoney Store \n Patner"
-        android:textAlignment="center"
-        android:textColor="#F6DE08"
-        android:textSize="22sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
+
+    <View
+        android:id="@+id/headerBackground"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@android:color/transparent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="22dp"
-        android:background="@android:color/transparent"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
         app:srcCompat="@drawable/user_01" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
-        android:layout_marginTop="20dp"
-        app:cardCornerRadius="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView4"
-        app:layout_constraintEnd_toStartOf="@+id/cardView3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/AddMenu"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#30847A">
-
-            <ImageView
-                android:id="@+id/addmenu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                app:layout_constraintEnd_toEndOf="@+id/textvieitemadd"
-                app:layout_constraintStart_toStartOf="@+id/textvieitemadd"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/plus_circle" />
-
-            <TextView
-                android:id="@+id/textvieitemadd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="25dp"
-                android:text="Uplod Item"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
-        android:layout_marginTop="20dp"
-        app:cardCornerRadius="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView5"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Ceremony Store\nPartner"
+        android:textAlignment="center"
+        android:textColor="@color/accent"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cardView2"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="24dp"
+        app:columnCount="2"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_chainStyle="spread">
+        app:rowCount="2">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/pendingorder"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#30847A">
+        <!-- Upload Item Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAddMenu"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:layout_columnWeight="1">
 
-            <ImageView
-                android:id="@+id/seedetail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                app:layout_constraintEnd_toEndOf="@+id/textview5"
-                app:layout_constraintStart_toStartOf="@+id/textview5"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/icon__2_" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/AddMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
-            <TextView
-                android:id="@+id/textview5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="25dp"
-                android:text="Pending Order"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                <ImageView
+                    android:id="@+id/addmenu_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/plus_circle"
+                    app:tint="@color/white" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/textvieitemadd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="Upload Item"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView5"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="15dp"
-        app:cardCornerRadius="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView67"
-        app:layout_constraintEnd_toEndOf="@+id/cardView3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/cardView3"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/Seeall"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#30847A">
+        <!-- Pending Order Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPendingOrder"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:layout_columnWeight="1">
 
-            <ImageView
-                android:id="@+id/imagee"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                app:layout_constraintEnd_toEndOf="@+id/setdate"
-                app:layout_constraintStart_toStartOf="@+id/setdate"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/eye" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pendingorder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
-            <TextView
-                android:id="@+id/setdate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="25dp"
-                android:text="Completed Order"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                <ImageView
+                    android:id="@+id/seedetail_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/icon__2_"
+                    app:tint="@color/white" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/textview5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="Pending Order"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView4"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="15dp"
-        app:cardCornerRadius="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView67"
-        app:layout_constraintEnd_toEndOf="@+id/cardView2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/cardView2"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/Addpic"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#30847A">
+        <!-- Completed Order Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCompletedOrder"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:layout_columnWeight="1">
 
-            <ImageView
-                android:id="@+id/uploadpic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                app:layout_constraintEnd_toEndOf="@+id/upladpicc"
-                app:layout_constraintStart_toStartOf="@+id/upladpicc"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/plus_circle" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Seeall"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
-            <TextView
-                android:id="@+id/upladpicc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="25dp"
-                android:text="Recent Pic"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                <ImageView
+                    android:id="@+id/imagee_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/eye"
+                    app:tint="@color/white" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/setdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="Completed Order"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Recent Pic Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAddPic"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:layout_columnWeight="1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Addpic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/uploadpic_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/plus_circle"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/upladpicc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="Recent Pic"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.gridlayout.widget.GridLayout>
 
     <TextView
         android:id="@+id/textView67"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:drawableRight="@drawable/recent"
-        android:drawablePadding="15dp"
-        android:text="Recent Ceremoney"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:drawablePadding="12dp"
+        android:gravity="center_vertical"
+        android:text="Recent Ceremony"
         android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView12"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/recent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView12"
-        android:layout_width="378dp"
-        android:layout_height="202dp"
-        android:layout_marginBottom="20dp"
-        app:cardCornerRadius="15dp"
+        android:id="@+id/cardViewSlider"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView67"
+        app:layout_constraintVertical_bias="0.0">
 
         <com.denzcoskun.imageslider.ImageSlider
             android:id="@+id/image_slider"
@@ -241,6 +277,5 @@ android:background="@drawable/kyahal"
             app:iss_period="2000"
             app:iss_text_align="CENTER" />
     </androidx.cardview.widget.CardView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
